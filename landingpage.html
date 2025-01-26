@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="landingpage.css" />
+    <title>Landing Page | Travel🏙️</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <img src="https://img.freepik.com/premium-vector/flat-vintage-travel-label-background_23-2148192820.jpg" alt="logo" />
+        </div>
+        <ul class="nav_links">
+          <li class="link"><a href="#">Home</a></li>
+          <li class="link"><a href="#">Destination</a></li>
+          <li class="link"><a href="#">Contact Us</a></li>
+          <li class="link"><a href="#">Blog</a></li>
+        </ul>
+        <div class="search">
+          <input type="text" placeholder="Search" />
+          <span><i class="ri-search-line"></i></span>
+        </div>
+        <div class="login">
+          <span><i class="ri-user-3-fill"></i></span>
+          Log In
+        </div>
+      </nav>
+      <div class="destination">
+        <div class="socials">
+          <span><i class="ri-twitter-line"></i></span>
+          <span><i class="ri-facebook-line"></i></span>
+          <span><i class="ri-instagram-line"></i></span>
+        </div>
+        <div class="content">
+          <h1>JOURNEY<br />TO<br /><span>JAPAN</span></h1>
+          <p>
+            Unveil the enchantment of Japan — where tranquil temples, vibrant streets and timeless history converge to create a journey that captivates every sense.
+          </p>
+          <button class="btn">BOOK NOW</button>
+        </div>
+        <div class="destination__grid">
+          <div class="destination__card">
+            <img src="https://www.godigit.com/content/dam/godigit/directportal/en/contenthm/osaka-castle-japan.jpg" alt="destination" />
+            <div class="card__content">
+              <h4>Osaka Castle</h4>
+              <p>
+                Osaka castle is one of Japan's most famous landmarks and played a major role in the unification of Japan during the sixteenth century of the Azuchi–Momoyama period.
+              </p>
+              <button class="btn read-more-btn">Read More</button>
+            </div>
+          </div>
+          <div class="destination__card">
+            <img src="https://www.godigit.com/content/dam/godigit/directportal/en/contenthm/tokyo-towers-minato-city.jpg" alt="destination" />
+            <div class="card__content">
+              <h4>Tokyo Tower, Minato City</h4>
+              <p>
+                Tokyo Tower is one of the most famous tourist attractions in Tokyo, Japan. Tourists can climb to the top of this tower and enjoy the bird’s eye view of the vibrant Tokyo city. 
+              </p>
+              <button class="btn read-more-btn">Read More</button>
+            </div>
+          </div>
+          <div class="destination__card">
+            <img src="https://www.thetimes.com/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F790c5859-a7d5-41a0-8416-2d0a1c2812b0.jpg?crop=2560%2C1706%2C0%2C0&resize=1534.5" alt="KYOTO" />
+            <div class="card__content">
+              <h4>KYOTO</h4>
+              <p>
+                Kyoto, Japan’s cultural heart, blends ancient trafdiditions with natural beauty. From Zen gardens and stunning temples to elegant tea ceremonies and vibrant landscapes, Kyoto invites you to experience the true essence of Japan.
+              </p>
+              <button class="btn read-more-btn">Read More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const readMoreButtons = document.querySelectorAll('.read-more-btn');
+
+      readMoreButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const cardContent = this.previousElementSibling;
+          const cardHeight = cardContent.scrollHeight;
+
+          if (cardContent.style.maxHeight) {
+            cardContent.style.maxHeight = null;
+            this.innerText = "Read More";
+          } else {
+            cardContent.style.maxHeight = cardHeight + "px";
+            this.innerText = "Read Less";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
